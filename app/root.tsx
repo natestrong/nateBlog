@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import styles from "../styles/app.css";
+
 import {
   Links,
   LiveReload,
@@ -29,4 +31,13 @@ export default function App() {
       </body>
     </html>
   );
+}
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
 }
